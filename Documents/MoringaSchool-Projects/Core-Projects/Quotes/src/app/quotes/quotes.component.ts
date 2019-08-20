@@ -7,12 +7,15 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
 quotes:Quote []= [
-    { id:1, author:'Leo', name:'technology quote', description:'The Science of today is the Tech of tomorrow'},
-    { id:2, author:'Alfie', name:'love quote', description:'You\'ve gotta dance like nobody\'s watching' },
-    { id:3, author:'Keren', name:'religious quote', description:'The LORD is my Shepherd, I shall NOT want'},
-    { id:4, author:'Paul', name:'philosophical quote', description:'I think therefore I am'},
+    new Quote (1, 'Leo', 'Technology quote', 'The Science of today is the Tech of tomorrow'),
+    new Quote (2, 'Alfie','Love quote', 'You\'ve gotta dance like nobody\'s watching' ),
+    new Quote (3, 'Keren','Religious quote','The LORD is my Shepherd, I shall NOT want'),
+    new Quote (4, 'Paul', 'Philosophical quote','I think therefore I am'),
   ];
   
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit() {
