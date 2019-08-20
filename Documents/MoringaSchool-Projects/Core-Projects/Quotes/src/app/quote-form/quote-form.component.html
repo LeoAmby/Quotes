@@ -1,10 +1,16 @@
 <div class="container-fluid">
   <h2 class="text-center">Post Your Quote</h2>
   <hr>
-  <form>
+  <form ng #quoteForm='ngForm'>
+        <div class="form-group">
+
+                <label for="author">Author</label>
+                <input type="text" required class="form-control" id="name"[(ngModel)]="newQuote.author" author="author">
+                    Display {{newQuote.author}}
+            </div>
       <div class="form-group">
 
-          <label for="name">Name</label>
+          <label for="name">Quote Type</label>
           <input type="text" required class="form-control" id="name">
 
       </div>
