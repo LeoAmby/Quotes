@@ -7,7 +7,7 @@
         <li>{{quote.name}}</li>
         <button class="btn" (click)='toggleDetails(i)'>View Quote</button>
         
-        <div><app-quote-detail *ngIf='quote.showDescription' bind-quote='quote'>
+        <div><app-quote-detail *ngIf='quote.showDescription' bind-quote='quote' (isComplete) = 'deleteQuote($event,i)'>
            
         </app-quote-detail>
         
