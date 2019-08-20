@@ -1,0 +1,12 @@
+.banner
+{
+  height:80px;
+  background-color: black;
+}
+
+h1 {
+  color:lightgrey;
+  text-align: center;
+  padding-top:15px;
+}
+
