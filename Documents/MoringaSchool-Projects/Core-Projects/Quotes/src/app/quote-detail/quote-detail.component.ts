@@ -20,9 +20,12 @@ export class QuoteDetailComponent implements OnInit{
 //like and dislike logic
 
 upVotes : number = 0;
-
 likesClick(){
   this.upVotes ++;
+}
+downVotes : number = 0;
+dislikesClick(){
+  this.downVotes ++;
 }
 
   constructor() { }
