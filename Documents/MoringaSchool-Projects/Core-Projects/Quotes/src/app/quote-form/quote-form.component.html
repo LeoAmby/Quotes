@@ -7,14 +7,19 @@
                 <label for="author">Author</label>
                 <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
                     
-            </div>
-      <div class="form-group">
+        </div>
+      <!-- <div class="form-group"> -->
 
           <label for="name">Quote Type</label>
-          <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
+           <select type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
+              <option value="Technology">Technology</option>
+              <option value="Love">Love</option>
+              <option value="Philosophy">Philosophy</option>
+              <option value="Religion">Religion</option>
+          </select> 
           
 
-      </div>
+      <!-- </div> -->
       <div class="form-group">
 
           <label for="description">Description</label>
