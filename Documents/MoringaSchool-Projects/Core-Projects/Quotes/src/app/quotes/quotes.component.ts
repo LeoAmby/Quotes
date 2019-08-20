@@ -12,7 +12,14 @@ quotes:Quote []= [
     new Quote (3, 'Keren','Religious quote','The LORD is my Shepherd, I shall NOT want'),
     new Quote (4, 'Paul', 'Philosophical quote','I think therefore I am'),
   ];
-  
+   
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+
+  }
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
