@@ -5,7 +5,7 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes; let i = index'>
         <li>{{quote.name}}</li>
-        <button (click)='toggleDetails(i)'>View Quote</button>
+        <button class="btn" (click)='toggleDetails(i)'>View Quote</button>
         <app-quote-detail *ngIf='quote.showDescription' bind-quote='quote'></app-quote-detail>
       </div>
     </div>
