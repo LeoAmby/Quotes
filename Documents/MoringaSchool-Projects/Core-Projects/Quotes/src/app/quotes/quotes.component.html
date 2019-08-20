@@ -1,11 +1,13 @@
-<div>
+<div class="container">
   <h3>Get Inspired</h3>
   <hr>
-  <ul>
-    <div *ngFor='let quote of quotes; let i = index'>
-      <li>{{quote.name}}</li>
-      <button (click)='toggleDetails(i)'>View Quote</button>
-      <app-quote-detail *ngIf='quote.showDescription' bind-quote='quote'></app-quote-detail>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes; let i = index'>
+        <li>{{quote.name}}</li>
+        <button (click)='toggleDetails(i)'>View Quote</button>
+        <app-quote-detail *ngIf='quote.showDescription' bind-quote='quote'></app-quote-detail>
+      </div>
     </div>
-  </ul>
+  </div>
 </div>
